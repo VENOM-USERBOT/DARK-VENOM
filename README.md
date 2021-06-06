@@ -7,6 +7,8 @@ Super Telegram UserBot Made With. [Python] [Telethon]
 # Made With Support of All Bhaiya Log 😂😂😂😂😂
 Work on Progress 😊😊
 # What To Do Next 
+<a href="https://t.me/Venom_Userbot_Support"><img src="https://img.shields.io/badge/Join-Support%20GROUP-red.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/Venom_support_channel"><img src="https://img.shields.io/badge/Join-Support%20channel-green.svg?style=for-the-badge&logo=Telegram"></a>
 
 # Deploy 
 
