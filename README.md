@@ -1,6 +1,5 @@
 # Description
-Super Fast Telegram UserBot Made With. [Python] [Telethon]
-
+Super Fast Telegram UserBot Made With
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 # ＬＯＧＯ  
