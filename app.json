@@ -28,7 +28,7 @@
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Fill your Full name or Username like @Hellion_OP.",
+      "description": "Fill your Full name or Username like @Hellion_Coder.",
       "value": "",
       "required": false
     },
