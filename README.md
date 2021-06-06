@@ -1,5 +1,6 @@
 # DARK-VENOM
 Super Telegram UserBot Made With. [Python] [Telethon]
+[LOGO]("https://telegra.ph/file/e6ab7296fe2eb03cdb33b.jpg")
 
 # Made With Support of All Bhaiya Log 😂😂😂😂😂
 Work on Progress 😊😊
