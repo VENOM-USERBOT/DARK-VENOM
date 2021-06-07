@@ -1,3 +1,5 @@
+#Credits To @HELLBOY_OP . don't kang without credits else you the gayest gay ever in the world. xD
+
 import os
 import sys
 import logging
