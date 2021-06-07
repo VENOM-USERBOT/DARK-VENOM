@@ -25,6 +25,6 @@ Super Fast Telegram UserBot Made With Python.
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/VENOM-USERBOT/DARK-VENOM/)
 
-# Spical credit 
-* Aryan Bhaiya 
-* Atul Bhaiya
+
+ 
+
