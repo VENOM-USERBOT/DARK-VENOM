@@ -1,7 +1,7 @@
 {
   "name": "Venom Bot",
   "description": "The best userbot made by Developers of Venom.",
-  "logo": "https://telegra.ph/file/0e00f9e103c4a21ed35a5.jpg", 
+  "logo": "https://telegra.ph/file/39d6098a32fb0beecaa07.jpg", 
     "keywords": [
     "telegram",
     "userbot",
@@ -11,7 +11,7 @@
   ],
   "repository": "https://github.com/VENOM-USERBOT/DARK-VENOM/",
   "website": "https://github.com/VENOM-USERBOT/DARK-VENOM/",
-  "success_url": "https://t.me/Hellion_OP", 
+  "success_url": "https://t.me/Venom_Userbot_Support", 
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable heroku.",
@@ -39,7 +39,7 @@
     },
     "ALIVE_PHOTTO": {
       "description": "put here any telegraph media link for alive pic.",
-      "value": "https://telegra.ph/file/28f018281e7460d88ebe3.jpg", 
+      "value": "https://telegra.ph/file/e6ab7296fe2eb03cdb33b.jpg", 
       "required": true
     },
     "BIO_MSG": {
@@ -49,7 +49,7 @@
     },
     "PMPERMIT_PIC": {
       "description": "put here any telegraph media link for pmpermit custom pic.",
-      "value": "https://telegra.ph/file/28f018281e7460d88ebe3.jpg",
+      "value": "https://telegra.ph/file/e6ab7296fe2eb03cdb33b.jpg",
       "required": true
     },
     "PM_PERMIT_GROUP_ID": {
