@@ -34,7 +34,7 @@
     },
     "ALIVE_MSG": {
       "description": "Set Custom awake Message When entering .awake command.",
-      "value": "I'm on Fire Master",
+      "value": "Venom is on Fire Master",
       "required": true
     },
     "ALIVE_PHOTTO": {
