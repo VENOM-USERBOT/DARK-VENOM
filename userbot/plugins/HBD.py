@@ -10,12 +10,11 @@ import importlib.util
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 
 @borg.on(admin_cmd(pattern="hbty$"))
-
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 5
-    animation_ttl = range(0, 16)
+    animation_ttl = range(16)
     await event.edit("Starting...")
     animation_chars = [          
               "**Hello!👋**",
@@ -36,7 +35,7 @@ async def _(event):
               "[.](http://www.lovethispic.com/uploaded_images/367867-Starry-Happy-Birthday-Gif.gif)",
           ]
     for i in animation_ttl:#By @NOOB_GUY_OP for Dark CObra
-        	
+
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i %16 ], link_preview=True)#By @NOOB_GUY_OP for Dark CObra
 
