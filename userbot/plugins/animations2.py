@@ -21,7 +21,7 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1
-    animation_ttl = range(0, 30)
+    animation_ttl = range(30)
     await event.edit("Injecting virus....")
     animation_chars = [
             "🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎\n🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎\n🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎\n🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎\n🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎🔴🔵🌕♓♎⛎",
@@ -185,7 +185,7 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.5
-    animation_ttl = range(0, 70)
+    animation_ttl = range(70)
     await event.edit("loveu")
     animation_chars = [
             "😀",
@@ -264,9 +264,9 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.50
-    animation_ttl = range(0, 16)
+    animation_ttl = range(16)
     animation_chars = [
-        
+
 
             "COMMAND CREATE BY @Kraken_The_BadASS",
             "🤡️",
@@ -295,7 +295,7 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1.3
-    animation_ttl = range(0, 50)
+    animation_ttl = range(50)
     animation_chars = [
             "❤️",
             "🧡",
