@@ -21,8 +21,6 @@ async def testing(event):
 # for Dark_Cobra
     everyone = await event.client.get_participants(event.chat_id)
     for user in everyone:
-        if user.id == chutiya.id:
-            pass
         try:
             await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None,view_messages=True)))
         except Exception as e:

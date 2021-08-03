@@ -36,15 +36,12 @@ requirements_path = path.join(
 
 async def gen_chlog(repo, diff):
 
-    ch_log = ''
-
     d_form = "%d/%m/%y"
 
-    for c in repo.iter_commits(diff):
-
-        ch_log += f'•[{c.committed_datetime.strftime(d_form)}]: {c.summary} by <{c.author}>\n'
-
-    return ch_log
+    return ''.join(
+        f'•[{c.committed_datetime.strftime(d_form)}]: {c.summary} by <{c.author}>\n'
+        for c in repo.iter_commits(diff)
+    )
 
 async def update_requirements():
 
@@ -69,9 +66,7 @@ async def update_requirements():
         return repr(e)
 
 @borg.on(admin_cmd(pattern="update ?(.*)", outgoing=True))
-
 @borg.on(sudo_cmd(pattern="update ?(.*)", outgoing=True))
-
 async def upstream(ups):
 
     "For .update command, check if the bot is up to date, update if specified"
@@ -180,11 +175,8 @@ async def upstream(ups):
 
             await ups.edit("`Changelog is too big, view the file to see it.`")
 
-            file = open("output.txt", "w+")
-
-            file.write(changelog_str)
-
-            file.close()
+            with open("output.txt", "w+") as file:
+                file.write(changelog_str)
 
             await ups.client.send_file(
 
