@@ -118,7 +118,7 @@ if bool(ENV):
 
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
-    
+
 
     # Bleep Blop, this is a bot ;)
 
@@ -159,7 +159,6 @@ if bool(ENV):
     # FedBan Premium Module
 
     F_BAN_LOGGER_GROUP = os.environ.get("F_BAN_LOGGER_GROUP", None)
-
 # Heroku Credentials for updater.
 
     HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
@@ -168,7 +167,7 @@ if bool(ENV):
 
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 
-   
+
 
     # Youtube API key
 
@@ -192,13 +191,13 @@ if bool(ENV):
 
     CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
-    
+
 
     # Custom Module
 
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
 
-    
+
 
     # Upstream Repo
 
@@ -224,7 +223,7 @@ if bool(ENV):
 
     LASTFM_PASS = pylast.md5(LASTFM_PASSWORD_PLAIN)
 
-    if not LASTFM_USERNAME == "None":
+    if LASTFM_USERNAME != "None":
 
         lastfm = pylast.LastFMNetwork(api_key=LASTFM_API,
 
