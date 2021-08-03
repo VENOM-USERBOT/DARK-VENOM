@@ -25,9 +25,8 @@ from typing import List
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
     from userbot.uniborgConfig import Config
-else:
-    if os.path.exists("config.py"):
-        from config import Development as Config
+elif os.path.exists("config.py"):
+    from config import Development as Config
 
 def command(**args):
     args["func"] = lambda e: e.via_bot_id is None
@@ -209,7 +208,7 @@ def admin_cmd(pattern=None, command=None, **args):
     # add blacklist chats, UB should not respond in these chats
     args["blacklist_chats"] = True
     black_list_chats = list(Config.UB_BLACK_LIST_CHAT)
-    if len(black_list_chats) > 0:
+    if black_list_chats:
         args["chats"] = black_list_chats
 
     # add blacklist chats, UB should not respond in these chats
@@ -475,9 +474,11 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
         time_to_completion = round((total - current) / speed) * 1000
         estimated_total_time = elapsed_time + time_to_completion
         progress_str = "[{0}{1}] {2}%\n".format(
-            ''.join(["▰" for i in range(math.floor(percentage / 10))]),
-            ''.join(["▱" for i in range(10 - math.floor(percentage / 10))]),
-            round(percentage, 2))
+            ''.join("▰" for i in range(math.floor(percentage / 10))),
+            ''.join("▱" for i in range(10 - math.floor(percentage / 10))),
+            round(percentage, 2),
+        )
+
         tmp = progress_str + \
             "{0} of {1}\nETA: {2}".format(
                 humanbytes(current),

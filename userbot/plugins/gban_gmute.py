@@ -20,7 +20,7 @@ from telethon.events import ChatAction
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
-    if event.reply_to_msg_id and not len(args) == 2:
+    if event.reply_to_msg_id and len(args) != 2:
         previous_message = await event.get_reply_message()
         user_obj = await event.client.get_entity(previous_message.sender_id)
         extra = event.pattern_match.group(1)
@@ -43,7 +43,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Error... Please report at @Venom_Userbot_support", str(err))           
+            return await event.edit("Error... Please report at @Venom_Userbot_support", str(err))
     return user_obj, extra
 
 
@@ -62,7 +62,7 @@ async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
-    if not sender.id == me.id:
+    if sender.id != me.id:
         dark = await dc.reply("Gbanning This User !")
     else:
         dark = await dc.edit("Wait Processing.....")
@@ -128,7 +128,7 @@ async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
-    if not sender.id == me.id:
+    if sender.id != me.id:
         dark = await dc.reply("`Wait Let Me ungban this nub nibba again😂`")
     else:
         dark = await dc.edit("Weit nd watch ! ")
@@ -191,26 +191,27 @@ async def gunben(userbot):
 
 @borg.on(ChatAction)
 async def handler(rkG): 
-   if rkG.user_joined or rkG.user_added:      
-       try:       	
-         from userbot.modules.sql_helper.gmute_sql import is_gmuted
-         guser = await rkG.get_user()      
-         gmuted = is_gmuted(guser.id)             
-       except:      
-          return
-       if gmuted:
-        for i in gmuted:
-            if i.sender == str(guser.id):                                                                         
-                chat = await rkG.get_chat()
-                admin = chat.admin_rights
-                creator = chat.creator   
-                if admin or creator:
-                 try:
-                    await client.edit_permissions(rkG.chat_id, guser.id, view_messages=False)                              
-                    await rkG.reply(
-                     f"**Gbanned User(the ultimate nub nibba) Joined the chat!!** \n"                      
-                     f"**Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"                   
-                     f"**Action **  : `Banned this nub nibba again...Sed`")                                                
-                 except:       
-                    rkG.reply("`No Permission To Ban.. @admins please ban him he is a globally banned user and a potential spammer...!`")                   
-                    return 
+    if not rkG.user_joined and not rkG.user_added:  
+        return
+    try:       	
+      from userbot.modules.sql_helper.gmute_sql import is_gmuted
+      guser = await rkG.get_user()      
+      gmuted = is_gmuted(guser.id)             
+    except:      
+       return
+    if gmuted:
+     for i in gmuted:
+         if i.sender == str(guser.id):                                                                         
+             chat = await rkG.get_chat()
+             admin = chat.admin_rights
+             creator = chat.creator   
+             if admin or creator:
+              try:
+                 await client.edit_permissions(rkG.chat_id, guser.id, view_messages=False)                              
+                 await rkG.reply(
+                  f"**Gbanned User(the ultimate nub nibba) Joined the chat!!** \n"                      
+                  f"**Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"                   
+                  f"**Action **  : `Banned this nub nibba again...Sed`")                                                
+              except:       
+                 rkG.reply("`No Permission To Ban.. @admins please ban him he is a globally banned user and a potential spammer...!`")                   
+                 return 
